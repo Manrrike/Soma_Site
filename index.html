@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login - SomaSystem</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --cor-branco: #FFFFFF;
+      --cor-fundo-principal: #0D1B2A;
+      --cor-fundo-secundario: #1B263B;
+      --cor-divisor: #415A77;
+      --cor-fundo-painel: #34424A;
+      --cor-placeholder: #778DA9;
+      --cor-hover-botao: #2E3A46;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    body {
+      background-color: var(--cor-fundo-principal);
+      display: flex;
+      height: 100vh;
+    }
+
+    .lado-esquerdo {
+      width: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .painel-login {
+      background-color: rgba(65, 90, 119, 0.7); /* Fundo translúcido */
+      padding: 20px 30px;
+      border-radius: 8px;
+      width: 100%;
+      max-width: 400px;
+      color: var(--cor-branco);
+      box-shadow: 0 0 20px rgba(0,0,0,0.3);
+      
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 80px;
+      margin-bottom: 20px;
+    }
+
+    .logo img {
+      height: 80px;
+    }
+
+    .painel-login h1 {
+      font-size: 22px;
+      margin-bottom: 5px;
+      text-align: right;
+    }
+
+    .painel-login p {
+      font-size: 12px;
+      color: var(--cor-branco);
+      margin-bottom: 20px;
+      text-align: right;
+    }
+
+    .painel-login label {
+      font-size: 14px;
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .inputLogin {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 4px;
+      background-color: var(--cor-branco);
+      color: #000;
+      font-size: 14px;
+      margin-bottom: 14px;
+    }
+
+    .inputLogin::placeholder {
+      color: var(--cor-placeholder);
+    }
+
+    .link-esqueci {
+      font-size: 12px;
+      color: var(--cor-branco);
+      text-decoration: none;
+      display: block;
+      margin-bottom: 18px;
+    }
+
+    .botao-login {
+      width: 100%;
+      padding: 10px;
+      background-color: #000;
+      color: var(--cor-branco);
+      border: none;
+      border-radius: 4px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .botao-login:hover {
+      background-color: var(--cor-hover-botao);
+    }
+
+    .lado-direito {
+      width: 50%;
+      background: url("https://manrrike.github.io/Soma_Site/Fundo.png") no-repeat center;
+      background-size: contain;
+      background-position: center;
+    }
+.texto-logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+    @media (max-width: 768px) {
+      .lado-direito {
+        display: none;
+      }
+
+      .lado-esquerdo {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="lado-esquerdo">
+    <div class="painel-login">
+      <div class="logo">
+       <a href="home.html">
+  <img src="https://manrrike.github.io/Soma_Site/Logo.png" alt="Logo SomaSystem" />
+</a>
+
+ <div class="texto-logo">
+    <h1>Login</h1>
+    <p>Sem conta? <a href="cadastro.html" style="color: #FFF; text-decoration: underline;">Crie uma agora.</a></p>
+  </div>
+      </div>
+      <label for="usuario">Email</label>
+      <input type="text" id="usuario" class="inputLogin" placeholder="Digite seu email" required />
+
+      <label for="senha">Senha</label>
+      <input type="password" id="senha" class="inputLogin" placeholder="Digite sua senha" required />
+
+      <a href="#" class="link-esqueci">Esqueceu a senha?</a>
+
+      <button class="botao-login" id="botao-login">Entrar</button>
+    </div>
+  </div>
+
+  <div class="lado-direito"></div>
+</body>
+</html>
